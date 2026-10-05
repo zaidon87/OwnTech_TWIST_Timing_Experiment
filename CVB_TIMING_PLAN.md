@@ -20,7 +20,7 @@ Use USB-only firmware: never initialize PWM/power outputs or ADC acquisition.
 | 3. Inputs and correctness | Complete | 7f8ef47; 119,556 on-board checks passed | None |
 | 4. Documentation and analysis | Complete | ae35b49; four analysis tests passed | None |
 | 5. Board experiments | Complete (internal timing) | E0/E0b + three 540,000-sample campaigns; final combined firmware verified | Optional external oscilloscope validation |
-| 6. Commit measured results | Complete; committing | Report, raw logs, metadata and summaries reviewed | Record commit hash |
+| 6. Commit measured results | Complete | 55c309c; report, raw logs, metadata and summaries committed | None |
 
 
 ## Implementation plan
@@ -62,7 +62,7 @@ its deadline diagnostic does not certify the complete production loop.
 | 2 | `feat: integrate timing-v2 harness for CVB` | e2ae546 |
 | 3 | `test: add reproducible CVB cases and correctness checks` | 7f8ef47; 119,556 on-board checks passed |
 | 4 | `docs: document CVB timing campaign and analysis` | ae35b49; Python checks passed |
-| 5 | `experiment: record CVB timing results` | Complete; committing internal timing results |
+| 5 | `experiment: record CVB timing results` | 55c309c; internal timing results |
 
 Include this file in milestone commits. Record a commit's hash in the next
 update (a commit cannot contain its own hash). Do not amend completed commits
@@ -114,6 +114,9 @@ transient; timing-body diagnostics exclude reporting and ISR exit.
 
 ## Immediate resume point
 
-All board work is finished. Review and commit `benchmarks/cvb/results/` plus this
-progress record. Then record the result commit hash here. Do not rerun or overwrite
-accepted logs. Only optional oscilloscope validation remains outside this session.
+All implementation, board runs and five planned commits are complete. The result
+commit is `55c309c`. This final documentation update records its hash and completion
+state. No required implementation work remains. Do not rerun or overwrite accepted
+logs. Optional follow-up: measure PC7 pulses with an oscilloscope for independent
+clock and timing validation. The board is currently running both-arm CVB with the
+power stage and ADC disabled.
