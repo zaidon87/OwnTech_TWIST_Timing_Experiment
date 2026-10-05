@@ -1,0 +1,10 @@
+experiment,mode,test_sort_n,reference_delay_us,control_period_us,irq_source,automatic_selector,purpose
+E0,0,,10,100,TIM6,yes,Instrumentation calibration
+E0b,2,,10,100,TIM6,yes,Clock validation
+E1,1,4,10,100,TIM6,yes,Bubble-sort baseline N=4
+E2,1,8,10,100,TIM6,yes,Bubble-sort baseline N=8
+E3,1,16,10,100,TIM6,yes,Bubble-sort baseline N=16
+E4,1,32,10,100,TIM6,yes,Bubble-sort baseline N=32
+E5,1,64,10,100,TIM6,yes,Bubble-sort stress N=64
+E6,manual,manual,10,100,TIM6,no,Real MMC algorithm
+E7,manual,manual,10,application,HRTIM_or_application,no,Full control loop
