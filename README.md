@@ -158,4 +158,9 @@ Do not start the TIM3 incremental encoder during the benchmark because it can cl
 
 ## License
 
-No license has been selected yet. Choose the repository license before publishing it publicly.
+The original code and documentation in this repository are licensed under the
+[MIT License](LICENSE).
+
+This project uses the **OwnTech Core** framework, which is distributed under
+the **GNU Lesser General Public License v2.1 (LGPL-2.1)**. OwnTech Core remains
+subject to its own license terms.
