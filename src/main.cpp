@@ -18,44 +18,18 @@
  */
 
 #include "timing_config.h"
-#include "cvb_algorithm.h"
-
-static volatile uint32_t result_guard;
-static uint32_t input_counter;
-
-static void prepare_cvb_input()
-{
-    const float32_t offset = static_cast<float32_t>(input_counter++ & 7U) * 0.01F;
-    for (uint8_t i = 0; i < total_number_of_modules_arm; ++i) {
-        modules_capacitor_voltages_upper_arm[i] = 75.0F - i + offset;
-        modules_capacitor_voltages_lower_arm[i] = 75.0F - i + offset;
-    }
-    number_of_connected_submodules_upper_arm = 2.0F;
-    number_of_connected_submodules_lower_arm = 3.0F;
-}
-
-static void cvb_execute()
-{
-#if CVB_SCOPE != 2
-    sorting_upper_arm();
-#endif
-#if CVB_SCOPE != 1
-    sorting_lower_arm();
-#endif
-}
-
-static void consume_cvb_result()
-{
-    uint32_t mask = 0;
-    for (uint8_t i = 0; i < total_number_of_modules_arm; ++i)
-        mask |= (g_u[i] << i) | (g_l[i] << (i + 5));
-    result_guard = mask;
-}
-
+#include "cvb_cases.h"
 #include "timing_harness.h"
 
 int main(void)
 {
+    const bool ok = cvb_selftest();
+    printk("CVB_SELFTEST,%s,checks=%u,failures=%u\n",
+           ok ? "PASS" : "FAIL", cvb_selftest_checks, cvb_selftest_failures);
+    if (!ok) {
+        printk("ERROR: timing not started because CVB correctness failed.\n");
+        return 0;
+    }
     setup_routine();
     return 0;
 }

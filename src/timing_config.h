@@ -11,5 +11,6 @@
 #define TEST_SORT_N              5U
 #define REFERENCE_DELAY_US       10U
 #define TIMING_USE_STM32_LL      1
+#define TIMING_VERBOSE_REPORT   0
 #define PRINT_CSV                1
 static_assert(CVB_SCOPE >= 0 && CVB_SCOPE <= 2, "Invalid CVB scope");

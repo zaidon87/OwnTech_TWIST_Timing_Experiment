@@ -17,9 +17,9 @@ Use USB-only firmware: never initialize PWM/power outputs or ADC acquisition.
 | Inspect branch, CVB and timing-v2 | Complete | Local `main_lille` and stored `hackathon_lille/main` both at `ecb51f5`; clean starting tree | Preserve baseline |
 | 1. Isolate existing CVB | Complete | Original saved in `benchmarks/cvb/reference/main_lille_ecb51f5.cpp`; both function bodies extracted verbatim to `src/cvb_algorithm.h` | Committed as e323140; build passed |
 | 2. Integrate timing-v2 | Complete | Source path below; TIM6 API/driver checked locally | Add DWT/GPIO/TIM6 harness |
-| 3. Reproducible inputs and correctness checks | Build passed; hardware checks pending | Six patterns, current signs and insertion counts planned | Implement and run checks |
+| 3. Reproducible inputs and correctness checks | Complete: on-board PASS | Six patterns, current signs and insertion counts planned | Implement and run checks |
 | 4. Document campaign and analysis | Pending | This resume record created | Add operating procedure and capture tooling |
-| 5. Build, flash, calibrate and measure | In progress: E0 upload | SPIN detected on COM9, USB serial `423250070032003B` | Run E0, E0b and CVB after verification |
+| 5. Build, flash, calibrate and measure | In progress: E0/E0b captured; CVB next | SPIN detected on COM9, USB serial `423250070032003B` | Run E0, E0b and CVB after verification |
 | 6. Commit measured results | Pending | No hardware timing measurements yet | Save logs, metadata and summaries |
 
 ## Implementation plan
@@ -58,8 +58,8 @@ its deadline diagnostic does not certify the complete production loop.
 | Order | Intended commit | Status / actual hash |
 | --- | --- | --- |
 | 1 | `refactor: isolate main-branch CVB for benchmarking` | e323140 |
-| 2 | `feat: integrate timing-v2 harness for CVB` | Committing; build passed |
-| 3 | `test: add reproducible CVB cases and correctness checks` | Pending |
+| 2 | `feat: integrate timing-v2 harness for CVB` | e2ae546 |
+| 3 | `test: add reproducible CVB cases and correctness checks` | Committing; 119,556 on-board checks passed |
 | 4 | `docs: document CVB timing campaign and analysis` | Pending |
 | 5 | `experiment: record CVB timing results` | Pending; claim scope calibration only if measured |
 
@@ -99,4 +99,8 @@ Stage 2 build passed (111,092 B flash / 34,185 B RAM). Helper renamed to `timing
 
 Campaign build passed (112,872 B flash / 34,213 B RAM). Optimized disassembly confirms `task_under_test()` calls both original sorting functions. Self-test covers 119,556 combinations (six patterns, all 3^5 tie arrangements, all 5! permutations; both current signs plus zero; all upper/lower counts). Hardware pass not yet observed. E0 build/upload log: `.pio/cvb-e0-upload.log`.
 
-Git identity is now configured by the user. Stage 1 committed as e323140. First E0 upload succeeded, but verbose reporting overflows Zephyr logging: serial log has dropped-message markers and missing metadata. Incomplete log retained at `benchmarks/cvb/results/E0.log`. Fix by using compact metadata + CSV reporting before collecting accepted results.
+Git identity is now configured by the user. Stage 1 committed as e323140. First E0 upload succeeded, but verbose reporting overflows Zephyr logging: serial log has dropped-message markers and missing metadata. Incomplete log retained at `benchmarks/cvb/results/diagnostics/E0.log`. Fix by using compact metadata + CSV reporting before collecting accepted results.
+
+E0 compact capture accepted: 20 batches / 20,000 samples, `results/E0.log`. Board reports 119,556 self-test checks, zero failures. Initial USB backlog produced a partial line; capture now drains old USB output before accepting records. Both failed logs retained under results/diagnostics.
+
+E0b reference-delay capture accepted: 20,000 samples; target max 10.429 us, no body overruns. This is a DWT-only reference run, NOT independent clock validation. Compact reporting resolved dropped log messages. Python analysis tests: 4 passed. Default source config restored to mode 3 / both arms.

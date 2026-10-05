@@ -196,6 +196,8 @@ typedef struct
     volatile timing_summary_t critical;   /* whole user callback body      */
     volatile timing_summary_t latency;    /* TIM6 event -> callback entry  */
     volatile timing_summary_t period;     /* entry-to-entry (jitter)       */
+    volatile uint32_t case_id;
+    volatile uint32_t result_guard;
     volatile uint32_t overruns;           /* body >= Ts in this batch      */
     volatile uint32_t overruns_total;     /* since boot                    */
 } timing_snapshot_t;
@@ -403,6 +405,8 @@ static void publish_snapshot_if_ready(void)
     stats_publish(&g_snapshot.critical, &g_critical_acc);
     stats_publish(&g_snapshot.latency,  &g_latency_acc);
     stats_publish(&g_snapshot.period,   &g_period_acc);
+    g_snapshot.case_id = cvb_active_case;
+    g_snapshot.result_guard = cvb_result_guard;
     g_snapshot.overruns       = g_overruns_batch;
     g_snapshot.overruns_total = g_overruns_total;
 
@@ -493,7 +497,7 @@ static void loop_background_task(void)
     uint32_t id_before;
     uint32_t id_after;
     timing_summary_t t, c, l, p;
-    uint32_t overruns, overruns_total;
+    uint32_t overruns, overruns_total, case_id, result_guard;
 
     do
     {
@@ -503,6 +507,8 @@ static void loop_background_task(void)
         summary_copy(&c, &g_snapshot.critical);
         summary_copy(&l, &g_snapshot.latency);
         summary_copy(&p, &g_snapshot.period);
+        case_id = g_snapshot.case_id;
+        result_guard = g_snapshot.result_guard;
         overruns       = g_snapshot.overruns;
         overruns_total = g_snapshot.overruns_total;
         timing_compiler_barrier();
@@ -512,8 +518,16 @@ static void loop_background_task(void)
 
     if ((id_before != 0U) && (id_before != last_batch_id) && (t.count != 0U))
     {
+        if (last_batch_id && id_before != last_batch_id + 1U)
+            printk("BATCH_GAP,%u,%u\n", last_batch_id, id_before);
         last_batch_id = id_before;
+        printk("CVB_META,%u,%u,%u,%s,%d,%d,%u,%u,%u,%u,%u\n",
+               id_before, case_id, (uint32_t)CVB_SCOPE, cvb_pattern_names[case_id / 30U],
+               cvb_current_pairs[(case_id / 6U) % 5U][0],
+               cvb_current_pairs[(case_id / 6U) % 5U][1], case_id % 6U, 5U - case_id % 6U,
+               cvb_selftest_checks, cvb_selftest_failures, result_guard);
 
+#if TIMING_VERBOSE_REPORT
         const uint32_t budget = g_budget_cycles;
         /* Worst case seen by the CPU = entry latency + body (exit not included). */
         const uint32_t worst_isr = l.max + c.max;
@@ -565,13 +579,14 @@ static void loop_background_task(void)
         printk("Scope: HIGH-pulse width on pin %u = Target + E0 offset\n",
                (uint32_t)TIMING_GPIO_PIN);
 
+#endif /* TIMING_VERBOSE_REPORT */
 #if PRINT_CSV
         /* CSV,batch,mode,N,samples,t_min,t_avg,t_max,c_min,c_avg,c_max,
          *     l_min,l_avg,l_max,p_min,p_avg,p_max,overruns,budget   (cycles) */
         printk("CSV,%u,%d,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u,%u\n",
                id_before, (int)TIMING_TEST_MODE, (uint32_t)TEST_SORT_N, t.count,
                t.min, t.avg, t.max, c.min, c.avg, c.max,
-               l.min, l.avg, l.max, p.min, p.avg, p.max, overruns, budget);
+               l.min, l.avg, l.max, p.min, p.avg, p.max, overruns, g_budget_cycles);
 #endif
     }
 
