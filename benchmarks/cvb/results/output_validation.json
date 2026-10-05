@@ -1,0 +1,14 @@
+{
+  "CVB_both": {
+    "checked_metadata_records": 540,
+    "output_mask_mismatches": 0
+  },
+  "CVB_upper": {
+    "checked_metadata_records": 540,
+    "output_mask_mismatches": 0
+  },
+  "CVB_lower": {
+    "checked_metadata_records": 540,
+    "output_mask_mismatches": 0
+  }
+}

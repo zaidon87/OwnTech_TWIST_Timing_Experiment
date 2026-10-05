@@ -14,13 +14,14 @@ Use USB-only firmware: never initialize PWM/power outputs or ADC acquisition.
 
 | Stage | Status | Evidence / commit | Next action |
 | --- | --- | --- | --- |
-| Inspect branch, CVB and timing-v2 | Complete | Local `main_lille` and stored `hackathon_lille/main` both at `ecb51f5`; clean starting tree | Preserve baseline |
-| 1. Isolate existing CVB | Complete | Original saved in `benchmarks/cvb/reference/main_lille_ecb51f5.cpp`; both function bodies extracted verbatim to `src/cvb_algorithm.h` | Committed as e323140; build passed |
-| 2. Integrate timing-v2 | Complete | Source path below; TIM6 API/driver checked locally | Add DWT/GPIO/TIM6 harness |
-| 3. Reproducible inputs and correctness checks | Complete: on-board PASS | Six patterns, current signs and insertion counts planned | Implement and run checks |
-| 4. Document campaign and analysis | Complete; committing | This resume record created | Add operating procedure and capture tooling |
-| 5. Build, flash, calibrate and measure | In progress: combined-arm capture running | SPIN detected on COM9, USB serial `423250070032003B` | Run E0, E0b and CVB after verification |
-| 6. Commit measured results | Pending | No hardware timing measurements yet | Save logs, metadata and summaries |
+| Inspect branch and timing-v2 | Complete | Baseline ecb51f5 preserved | None |
+| 1. Isolate existing CVB | Complete | e323140; functions unchanged, build passed | None |
+| 2. Integrate timing-v2 | Complete | e2ae546; DWT/PC7/TIM6, 200 us | None |
+| 3. Inputs and correctness | Complete | 7f8ef47; 119,556 on-board checks passed | None |
+| 4. Documentation and analysis | Complete | ae35b49; four analysis tests passed | None |
+| 5. Board experiments | Complete (internal timing) | E0/E0b + three 540,000-sample campaigns; final combined firmware verified | Optional external oscilloscope validation |
+| 6. Commit measured results | Complete; committing | Report, raw logs, metadata and summaries reviewed | Record commit hash |
+
 
 ## Implementation plan
 
@@ -60,8 +61,8 @@ its deadline diagnostic does not certify the complete production loop.
 | 1 | `refactor: isolate main-branch CVB for benchmarking` | e323140 |
 | 2 | `feat: integrate timing-v2 harness for CVB` | e2ae546 |
 | 3 | `test: add reproducible CVB cases and correctness checks` | 7f8ef47; 119,556 on-board checks passed |
-| 4 | `docs: document CVB timing campaign and analysis` | Committing; Python checks passed |
-| 5 | `experiment: record CVB timing results` | Pending; claim scope calibration only if measured |
+| 4 | `docs: document CVB timing campaign and analysis` | ae35b49; Python checks passed |
+| 5 | `experiment: record CVB timing results` | Complete; committing internal timing results |
 
 Include this file in milestone commits. Record a commit's hash in the next
 update (a commit cannot contain its own hash). Do not amend completed commits
@@ -90,19 +91,29 @@ stage. Do not overwrite collected results or re-extract from the simplified main
 
 ## Results and limitations
 
-No hardware timing results collected yet. No oscilloscope connection established.
+| Target | Samples | Min us | Average us | Observed max us |
+| --- | ---: | ---: | ---: | ---: |
+| Both arms | 540,000 | 8.700 | 8.929 | 9.312 |
+| Upper arm | 540,000 | 4.371 | 4.496 | 4.724 |
+| Lower arm | 540,000 | 4.453 | 4.560 | 4.759 |
 
+No body overruns observed. Full details: [results report](benchmarks/cvb/results/REPORT.md).
+Board is running mode 3 / scope 0 (both arms), with no power/ADC initialization.
+Final ELF matches the measured combined image and five live batches passed.
+No oscilloscope validation performed. Upper-only capture retains a startup period
+transient; timing-body diagnostics exclude reporting and ISR exit.
 
-Commit blocker: Git author identity is unset. First commit is staged; user asked for name/email. Continue implementation without mixing later unstaged changes into that staged commit.
+## Resolved issues
 
-Stage 2 build passed (111,092 B flash / 34,185 B RAM). Helper renamed to `timing_compiler_barrier` to avoid Zephyr macro collision. Stage 2 commit snapshot saved in `.pio/cvb-stage2/` while waiting for author identity.
+- Git identity initially missing; user configured it. First four planned commits exist.
+- Zephyr compiler_barrier macro conflicted with timing-v2 helper: renamed helper.
+- Verbose reporting overflowed the logging buffer: compact CSV/metadata is default.
+- USB backlog contained partial output: capture drains it before accepting records.
+- Failed E0 logs are retained in results/diagnostics and excluded from analysis.
+- `.vscode/settings.json` has an unrelated editor visibility change; leave it untouched.
 
-Campaign build passed (112,872 B flash / 34,213 B RAM). Optimized disassembly confirms `task_under_test()` calls both original sorting functions. Self-test covers 119,556 combinations (six patterns, all 3^5 tie arrangements, all 5! permutations; both current signs plus zero; all upper/lower counts). Hardware pass not yet observed. E0 build/upload log: `.pio/cvb-e0-upload.log`.
+## Immediate resume point
 
-Git identity is now configured by the user. Stage 1 committed as e323140. First E0 upload succeeded, but verbose reporting overflows Zephyr logging: serial log has dropped-message markers and missing metadata. Incomplete log retained at `benchmarks/cvb/results/diagnostics/E0.log`. Fix by using compact metadata + CSV reporting before collecting accepted results.
-
-E0 compact capture accepted: 20 batches / 20,000 samples, `results/E0.log`. Board reports 119,556 self-test checks, zero failures. Initial USB backlog produced a partial line; capture now drains old USB output before accepting records. Both failed logs retained under results/diagnostics.
-
-E0b reference-delay capture accepted: 20,000 samples; target max 10.429 us, no body overruns. This is a DWT-only reference run, NOT independent clock validation. Compact reporting resolved dropped log messages. Python analysis tests: 4 passed. Default source config restored to mode 3 / both arms.
-
-Stage 4: benchmark README, capture/config/build-record/analysis scripts and four passing analysis tests added. Combined-arm firmware uploaded successfully; capture running to `results/CVB_both.log` (540 batch phases required). Stage 3 committed as 7f8ef47.
+All board work is finished. Review and commit `benchmarks/cvb/results/` plus this
+progress record. Then record the result commit hash here. Do not rerun or overwrite
+accepted logs. Only optional oscilloscope validation remains outside this session.

@@ -1,0 +1,17 @@
+{
+  "run": "E0",
+  "date": "2026-10-05",
+  "cpu_hz": 170000000,
+  "optimization": "CONFIG_SIZE_OPTIMIZATIONS=y (-Os)",
+  "board_serial": "423250070032003B",
+  "scope_validation": "not performed",
+  "sha256": {
+    "src/main.cpp": "18191ab257c057cd19b72fd2368a36fbbb8aa7096bc1b9dd0f7a1a6c970334f1",
+    "src/cvb_algorithm.h": "7228e06d08f141e63e0c4df6262e095342df51d5461189b420b0bef28c8c4d3a",
+    "src/cvb_cases.h": "b1426e054d5bdc15c6c958c7de7469db3b838f69d3cc016d201b590ba48008ef",
+    "src/timing_harness.h": "252f86f9bb2214376fb794e7691adbc6b78d7bcb69ce1780f707b4ff3e4ca590",
+    "src/timing_config.h": "8f17aba3bf5d2c23fb3685664e6078b59ed4adb18009d009c39ce2c46423cf40",
+    ".pio/build/USB/firmware.elf": "2e4a121ef6e7d08dfe2db5e75898a06ec78c87aee89e229664fa8695d1b7f348",
+    ".pio/build/USB/firmware.mcuboot.bin": "6745402dbf00784a37a7178b829b8d460e7229a9a7c6e95622e00b4f8e3519b6"
+  }
+}

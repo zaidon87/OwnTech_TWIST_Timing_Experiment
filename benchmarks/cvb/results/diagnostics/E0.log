@@ -1,0 +1,2344 @@
+***** delaying boot 1500ms (per build configuration) *****
+*** Booting Zephyr OS build zephyr-v40000 (delayed boot 1500ms) ***
+CVB_SELFTEST,PASS,checks=119556,failures=0
+
+OwnTech SPIN/TWIST timing benchmark v2
+  CPU clock (CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC): 170000000 Hz
+  Control period Ts: 200 us = 34000 cycles
+  Timing pin: SPIN 9 -> PC7, LL fast path: 1
+  Mode: 0, N: 5, batch: 1000 samples, IRQ source: TIM6
+  DWT cycle counter: OK
+CSV_HEADER,batch,mode,N,samples,t_min,t_avg,t_max,c_min,c_avg,c_max,l_min,l_avg,l_max,p_min,p_avg,p_max,overruns,budget_cycles
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m     0 cyc =    0.000 us   avg    310 cyc =    1.823 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34969 cyc =  205.700 us
+  Period jitter  (max-min):   1283 cyc =    7.547 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,1,0,5,1000,6,9,20,16,19,32,0,310,561,33686,34000,34969,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34312 cyc =  201.835 us
+  Period jitter  (max-min):    626 cyc =    3.682 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,2,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34312,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34320 cyc =  201.882 us
+  Period jitter  (max-min):    634 cyc =    3.729 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,3,0,5,1000,6,9,20,16,19,32,255,313,561,33686,34000,34320,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,4,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34333 cyc =  201.958 us
+  Period jitter  (max-min):    647 cyc =    3.805 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,5,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34333,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,6,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34322 cyc =  201.894 us
+  Period jitter  (max-min):    636 cyc =    3.741 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,7,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34322,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,8,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,9,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,10,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33716 cyc =  198.329 us   avg  34000 cyc =  200.000 us   max  34325 cyc =  201.911 us
+  Period jitter  (max-min):    609 cyc =    3.582 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,11,0,5,1000,6,9,20,16,19,32,255,314,578,33716,34000,34325,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,12,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,13,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33684 cyc =  198.141 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,14,0,5,1000,6,9,20,16,19,32,255,314,578,33684,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,15,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,16,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,17,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34316,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34313 cyc =  201.841 us
+  Period jitter  (max-min):    627 cyc =    3.688 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,18,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34313,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,19,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34327 cyc =  201.923 us
+  Period jitter  (max-min):    641 cyc =    3.770 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,20,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34327,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33716 cyc =  198.329 us   avg  34000 cyc =  200.000 us   max  34322 cyc =  201.894 us
+  Period jitter  (max-min):    606 cyc =    3.564 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,21,0,5,1000,6,9,20,16,19,32,255,314,578,33716,34000,34322,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,22,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,23,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,24,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34318,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,25,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,26,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,27,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,28,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34323 cyc =  201.900 us
+  Period jitter  (max-min):    637 cyc =    3.747 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,29,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34323,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,30,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,31,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,32,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34315,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,33,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    595 cyc =    3.500 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    627 cyc =    3.688 us
+  Worst-case slack         :  33373 cyc =  196.311 us
+  Worst-case utilisation   : 1.8 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,34,0,5,1000,6,9,20,16,19,32,255,314,595,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34312 cyc =  201.835 us
+  Period jitter  (max-min):    626 cyc =    3.682 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,35,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34312,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34319 cyc =  201.876 us
+  Period jitter  (max-min):    633 cyc =    3.723 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,36,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34319,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,37,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,38,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,39,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,40,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,41,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,42,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,43,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34322 cyc =  201.894 us
+  Period jitter  (max-min):    636 cyc =    3.741 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,44,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34322,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33684 cyc =  198.141 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,45,0,5,1000,6,9,20,16,19,32,255,314,578,33684,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,46,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34321 cyc =  201.888 us
+  Period jitter  (max-min):    635 cyc =    3.735 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,47,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34321,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34319 cyc =  201.876 us
+  Period jitter  (max-min):    633 cyc =    3.723 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,48,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34319,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,49,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,50,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,51,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,52,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,53,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,54,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,55,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,56,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34331 cyc =  201.947 us
+  Period jitter  (max-min):    645 cyc =    3.794 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,57,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34331,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,58,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    595 cyc =    3.500 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34350 cyc =  202.058 us
+  Period jitter  (max-min):    664 cyc =    3.905 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    627 cyc =    3.688 us
+  Worst-case slack         :  33373 cyc =  196.311 us
+  Worst-case utilisation   : 1.8 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,59,0,5,1000,6,9,20,16,19,32,255,314,595,33686,34000,34350,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,60,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  33999 cyc =  199.994 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,61,0,5,1000,6,9,20,16,19,32,255,313,578,33686,33999,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,62,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34325 cyc =  201.911 us
+  Period jitter  (max-min):    639 cyc =    3.758 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,63,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34325,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,64,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34312 cyc =  201.835 us
+  Period jitter  (max-min):    626 cyc =    3.682 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,65,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34312,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,66,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,67,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,68,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,69,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,70,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34327 cyc =  201.923 us
+  Period jitter  (max-min):    641 cyc =    3.770 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,71,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34327,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34319 cyc =  201.876 us
+  Period jitter  (max-min):    633 cyc =    3.723 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,72,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34319,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34313 cyc =  201.841 us
+  Period jitter  (max-min):    627 cyc =    3.688 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,73,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34313,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,74,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34320 cyc =  201.882 us
+  Period jitter  (max-min):    634 cyc =    3.729 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,75,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34320,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,76,0,5,1000,6,9,20,16,19,32,255,313,561,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,77,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,78,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,79,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,80,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34331 cyc =  201.947 us
+  Period jitter  (max-min):    645 cyc =    3.794 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,81,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34331,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,82,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,83,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,84,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,85,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,86,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,87,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,88,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,89,0,5,1000,6,9,20,16,19,32,255,313,561,33686,34000,34316,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,90,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,91,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,92,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,93,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,94,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,95,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,96,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34318,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34323 cyc =  201.900 us
+  Period jitter  (max-min):    637 cyc =    3.747 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,97,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34323,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,98,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,99,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34323 cyc =  201.900 us
+  Period jitter  (max-min):    637 cyc =    3.747 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,100,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34323,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34333 cyc =  201.958 us
+  Period jitter  (max-min):    647 cyc =    3.805 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,101,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34333,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,102,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,103,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34320 cyc =  201.882 us
+  Period jitter  (max-min):    634 cyc =    3.729 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,104,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34320,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,105,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,106,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,107,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    595 cyc =    3.500 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34319 cyc =  201.876 us
+  Period jitter  (max-min):    633 cyc =    3.723 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    627 cyc =    3.688 us
+  Worst-case slack         :  33373 cyc =  196.311 us
+  Worst-case utilisation   : 1.8 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,108,0,5,1000,6,9,20,16,19,32,255,314,595,33686,34000,34319,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,109,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,110,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,111,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,112,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34313 cyc =  201.841 us
+  Period jitter  (max-min):    627 cyc =    3.688 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,113,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34313,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,114,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,115,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,116,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34325 cyc =  201.911 us
+  Period jitter  (max-min):    639 cyc =    3.758 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,117,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34325,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34330 cyc =  201.941 us
+  Period jitter  (max-min):    644 cyc =    3.788 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,118,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34330,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,119,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34313 cyc =  201.841 us
+  Period jitter  (max-min):    627 cyc =    3.688 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,120,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34313,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34321 cyc =  201.888 us
+  Period jitter  (max-min):    635 cyc =    3.735 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,121,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34321,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,122,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,123,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,124,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34327 cyc =  201.923 us
+  Period jitter  (max-min):    641 cyc =    3.770 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,125,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34327,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,126,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,127,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,128,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,129,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,130,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,131,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,132,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,133,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,134,0,5,1000,6,9,20,16,19,32,255,313,561,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,135,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,136,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,137,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,138,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,139,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34323 cyc =  201.900 us
+  Period jitter  (max-min):    637 cyc =    3.747 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,140,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34323,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,141,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,142,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,143,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,144,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34316,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,145,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34323 cyc =  201.900 us
+  Period jitter  (max-min):    637 cyc =    3.747 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,146,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34323,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,147,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,148,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,149,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,150,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    238 cyc =    1.400 us   avg    328 cyc =    1.929 us   max    561 cyc =    3.300 us
+  Period         min  33682 cyc =  198.129 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,151,0,5,1000,6,10,20,16,20,32,238,328,561,33682,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    342 cyc =    2.011 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34327 cyc =  201.923 us
+  Period jitter  (max-min):    641 cyc =    3.770 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,152,0,5,1000,6,11,20,16,22,32,255,342,578,33686,34000,34327,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    316 cyc =    1.858 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,153,0,5,1000,6,9,20,16,19,32,255,316,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,154,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34323 cyc =  201.900 us
+  Period jitter  (max-min):    637 cyc =    3.747 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,155,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34323,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,156,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,157,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,158,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34328 cyc =  201.929 us
+  Period jitter  (max-min):    642 cyc =    3.776 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,159,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34328,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34321 cyc =  201.888 us
+  Period jitter  (max-min):    635 cyc =    3.735 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,160,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34321,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,161,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,162,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33725 cyc =  198.382 us   avg  34000 cyc =  200.000 us   max  34327 cyc =  201.923 us
+  Period jitter  (max-min):    602 cyc =    3.541 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,163,0,5,1000,6,9,20,16,19,32,255,314,578,33725,34000,34327,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34311 cyc =  201.829 us
+  Period jitter  (max-min):    625 cyc =    3.676 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,164,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34311,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,165,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,166,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34315 cyc =  201.852 us
+  Period jitter  (max-min):    629 cyc =    3.700 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,167,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34315,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34311 cyc =  201.829 us
+  Period jitter  (max-min):    625 cyc =    3.676 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,168,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34311,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34319 cyc =  201.876 us
+  Period jitter  (max-min):    633 cyc =    3.723 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,169,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34319,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34326 cyc =  201.917 us
+  Period jitter  (max-min):    640 cyc =    3.764 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,170,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34326,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,171,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34312 cyc =  201.835 us
+  Period jitter  (max-min):    626 cyc =    3.682 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,172,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34312,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33725 cyc =  198.382 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    589 cyc =    3.464 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,173,0,5,1000,6,9,20,16,19,32,255,314,578,33725,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,174,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,175,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,176,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34324 cyc =  201.905 us
+  Period jitter  (max-min):    638 cyc =    3.752 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,177,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34324,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,178,0,5,1000,6,9,20,16,19,32,255,314,561,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,179,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34316 cyc =  201.858 us
+  Period jitter  (max-min):    630 cyc =    3.705 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,180,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34316,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,181,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34310 cyc =  201.823 us
+  Period jitter  (max-min):    624 cyc =    3.670 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,182,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34310,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,183,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,184,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34320 cyc =  201.882 us
+  Period jitter  (max-min):    634 cyc =    3.729 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,185,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34320,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,186,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34329 cyc =  201.935 us
+  Period jitter  (max-min):    643 cyc =    3.782 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,187,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34329,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34320 cyc =  201.882 us
+  Period jitter  (max-min):    634 cyc =    3.729 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,188,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34320,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34323 cyc =  201.900 us
+  Period jitter  (max-min):    637 cyc =    3.747 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,189,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34323,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34325 cyc =  201.911 us
+  Period jitter  (max-min):    639 cyc =    3.758 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,190,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34325,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    561 cyc =    3.300 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    593 cyc =    3.488 us
+  Worst-case slack         :  33407 cyc =  196.511 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,191,0,5,1000,6,9,20,16,19,32,255,315,561,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34328 cyc =  201.929 us
+  Period jitter  (max-min):    642 cyc =    3.776 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,192,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34328,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    315 cyc =    1.852 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34330 cyc =  201.941 us
+  Period jitter  (max-min):    644 cyc =    3.788 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,193,0,5,1000,6,9,20,16,19,32,255,315,578,33686,34000,34330,0,34000
+  Entry latency  min [1;31m--- 19 messages dropped ---
+[0m   255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34318 cyc =  201.870 us
+  Period jitter  (max-min):    632 cyc =    3.717 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,194,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34318,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,195,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34317 cyc =  201.864 us
+  Period jitter  (max-min):    631 cyc =    3.711 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,196,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34317,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    313 cyc =    1.841 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,197,0,5,1000,6,9,20,16,19,32,255,313,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34314 cyc =  201.847 us
+  Period jitter  (max-min):    628 cyc =    3.694 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us
+Deadline: PASS
+  Worst case (latency+body):    610 cyc =    3.588 us
+  Worst-case slack         :  33390 cyc =  196.411 us
+  Worst-case utilisation   : 1.7 %
+Scope: HIGH-pulse width on pin 9 = Target + E0 offset
+CSV,198,0,5,1000,6,9,20,16,19,32,255,314,578,33686,34000,34314,0,34000
+
+[1;31m--- 18 messages dropped ---
+[0m  Entry latency  min    255 cyc =    1.500 us   avg    314 cyc =    1.847 us   max    578 cyc =    3.400 us
+  Period         min  33686 cyc =  198.152 us   avg  34000 cyc =  200.000 us   max  34326 cyc =  201.917 us
+  Period jitter  (max-min):    640 cyc =    3.764 us
+  Period budget  (Ts)     :  34000 cyc =  200.000 us

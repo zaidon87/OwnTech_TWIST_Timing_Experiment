@@ -1,0 +1,19 @@
+***** delaying boot 1500ms (per build configuration) *****
+*** Booting Zephyr OS build zephyr-v40000 (delayed boot 1500ms) ***
+CVB_SELFTEST,PASS,checks=119556,failures=0
+
+OwnTech SPIN/TWIST timing benchmark v2
+  CPU clock (CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC): 170000000 Hz
+  Control period Ts: 200 us = 34000 cycles
+  Timing pin: SPIN 9 -> PC7, LL fast path: 1
+  Mode: 0, N: 5, batch: 1000 samples, IRQ source: TIM6
+  DWT cycle counter: OK
+CSV_HEADER,batch,mode,N,samples,t_min,t_avg,t_max,c_min,c_avg,c_max,l_min,l_avg,l_max,p_min,p_avg,p_max,overruns,budget_cycles
+CVB_META,1,0,0,ascending,1,1,0,5,119556,0,0
+CSV,1,0,5,1000,6,8,17,16,18,27,0,368,561,33767,34000,34971,0,34000
+CVB_META,2,0,0,ascending,1,1,0,5,119556,0,0
+CSV,2,0,5,1000,6,8,17,16,18,27,323,364,561,33767,34000,34233,0,34000
+CVB_META,3,0,0,ascending,1,1,0,5,119556,0,0
+CSV,3,0,5,1000,6,8,17,16,18,27,323,365,561,33767,34000,34236,0,34000
+CVB_META,4,0,0,ascending,1,1,0,5,119556,0,0
+CSV,4,0,5,1000,6,8,17,16,18,27,323,364,561,33767,34000,342CVB_META,51,0,0,ascending,1,1,0,5,119556,0,0

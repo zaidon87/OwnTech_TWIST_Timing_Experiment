@@ -1,0 +1,24 @@
+{
+  "run": "E0b",
+  "date": "2026-10-05",
+  "source_baseline": "ecb51f5c807ef0e06e5c59e451165c63c6d227b5",
+  "head_at_build": "e2ae546369296e82a8ab2e89ea49e9c7c88be991",
+  "note": "Source hashes identify the exact working-tree inputs, including any uncommitted changes.",
+  "cpu_hz": 170000000,
+  "optimization": "CONFIG_SIZE_OPTIMIZATIONS=y (-Os)",
+  "compiler": "arm-none-eabi GCC 12.3.1",
+  "zephyr": "4.0.0",
+  "board": "spin@1_2_0",
+  "shield_build": "twist_v1_4_1",
+  "board_serial": "423250070032003B",
+  "scope_validation": "not performed",
+  "sha256": {
+    "src/main.cpp": "18191ab257c057cd19b72fd2368a36fbbb8aa7096bc1b9dd0f7a1a6c970334f1",
+    "src/cvb_algorithm.h": "7228e06d08f141e63e0c4df6262e095342df51d5461189b420b0bef28c8c4d3a",
+    "src/cvb_cases.h": "b1426e054d5bdc15c6c958c7de7469db3b838f69d3cc016d201b590ba48008ef",
+    "src/timing_harness.h": "252f86f9bb2214376fb794e7691adbc6b78d7bcb69ce1780f707b4ff3e4ca590",
+    "src/timing_config.h": "dcb65a328e400edfcb2f7f21ccad91686d6497403e66c8dc3a4df4e5a926eeae",
+    ".pio/build/USB/firmware.elf": "7261f0945f888b737420483db2766175d76e1ced81f6e934f2d8dcbbbdab02f4",
+    ".pio/build/USB/firmware.mcuboot.bin": "35840067cd3f6a73b2a7aa65f5ac2aba66f066a88307e3e4670241f48e99cdfa"
+  }
+}

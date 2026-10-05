@@ -1,0 +1,10 @@
+{
+  "serial_number": "423250070032003B",
+  "port": "COM9",
+  "mode": 0,
+  "scope": 0,
+  "distinct_batches": 3,
+  "required_batches": 20,
+  "complete": false,
+  "duration_s": 0.141
+}

@@ -1,0 +1,17 @@
+{
+  "board_serial": "423250070032003B",
+  "mode": 3,
+  "scope": 0,
+  "verified_batches": [
+    4842,
+    4843,
+    4844,
+    4845,
+    4846
+  ],
+  "selftest_checks": 119556,
+  "selftest_failures": 0,
+  "body_overruns": 0,
+  "elf_matches_measured_combined_image": true,
+  "elf_sha256": "7dae12a2a45048a4f83ca103076c0f35bce72151707a6feecf47549c54a92992"
+}
