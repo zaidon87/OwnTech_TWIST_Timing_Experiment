@@ -1,4 +1,4 @@
-# OwnTech SPIN/TWIST Timing Benchmark — Experiment Setup Guide
+# OwnTech SPIN/TWIST Timing Benchmark:- Experiment Setup Guide
 
 > GitHub text export of the supplied English guide. The original source was a DOCX document.
 
