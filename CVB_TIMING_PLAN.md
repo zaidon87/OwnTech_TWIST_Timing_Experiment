@@ -18,8 +18,8 @@ Use USB-only firmware: never initialize PWM/power outputs or ADC acquisition.
 | 1. Isolate existing CVB | Complete | Original saved in `benchmarks/cvb/reference/main_lille_ecb51f5.cpp`; both function bodies extracted verbatim to `src/cvb_algorithm.h` | Committed as e323140; build passed |
 | 2. Integrate timing-v2 | Complete | Source path below; TIM6 API/driver checked locally | Add DWT/GPIO/TIM6 harness |
 | 3. Reproducible inputs and correctness checks | Complete: on-board PASS | Six patterns, current signs and insertion counts planned | Implement and run checks |
-| 4. Document campaign and analysis | Pending | This resume record created | Add operating procedure and capture tooling |
-| 5. Build, flash, calibrate and measure | In progress: E0/E0b captured; CVB next | SPIN detected on COM9, USB serial `423250070032003B` | Run E0, E0b and CVB after verification |
+| 4. Document campaign and analysis | Complete; committing | This resume record created | Add operating procedure and capture tooling |
+| 5. Build, flash, calibrate and measure | In progress: combined-arm capture running | SPIN detected on COM9, USB serial `423250070032003B` | Run E0, E0b and CVB after verification |
 | 6. Commit measured results | Pending | No hardware timing measurements yet | Save logs, metadata and summaries |
 
 ## Implementation plan
@@ -59,8 +59,8 @@ its deadline diagnostic does not certify the complete production loop.
 | --- | --- | --- |
 | 1 | `refactor: isolate main-branch CVB for benchmarking` | e323140 |
 | 2 | `feat: integrate timing-v2 harness for CVB` | e2ae546 |
-| 3 | `test: add reproducible CVB cases and correctness checks` | Committing; 119,556 on-board checks passed |
-| 4 | `docs: document CVB timing campaign and analysis` | Pending |
+| 3 | `test: add reproducible CVB cases and correctness checks` | 7f8ef47; 119,556 on-board checks passed |
+| 4 | `docs: document CVB timing campaign and analysis` | Committing; Python checks passed |
 | 5 | `experiment: record CVB timing results` | Pending; claim scope calibration only if measured |
 
 Include this file in milestone commits. Record a commit's hash in the next
@@ -104,3 +104,5 @@ Git identity is now configured by the user. Stage 1 committed as e323140. First 
 E0 compact capture accepted: 20 batches / 20,000 samples, `results/E0.log`. Board reports 119,556 self-test checks, zero failures. Initial USB backlog produced a partial line; capture now drains old USB output before accepting records. Both failed logs retained under results/diagnostics.
 
 E0b reference-delay capture accepted: 20,000 samples; target max 10.429 us, no body overruns. This is a DWT-only reference run, NOT independent clock validation. Compact reporting resolved dropped log messages. Python analysis tests: 4 passed. Default source config restored to mode 3 / both arms.
+
+Stage 4: benchmark README, capture/config/build-record/analysis scripts and four passing analysis tests added. Combined-arm firmware uploaded successfully; capture running to `results/CVB_both.log` (540 batch phases required). Stage 3 committed as 7f8ef47.

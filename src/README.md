@@ -1,3 +1,8 @@
+> This checkout currently runs the USB-only CVB timing benchmark, not the powered
+> MMC application described below. See [benchmark instructions](../benchmarks/cvb/README.md)
+> and [progress / resume record](../CVB_TIMING_PLAN.md). The original firmware is
+> preserved under `benchmarks/cvb/reference/`.
+
 # MMC arm - with CVB using duty cycle ramping
 
 ## Objectives and context
