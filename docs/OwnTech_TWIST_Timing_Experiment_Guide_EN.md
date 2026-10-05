@@ -5,14 +5,10 @@
 <PARSED TEXT FOR PAGE: 1 / 21>OwnTech SPIN/TWIST timing benchmark — Experiment Setup Guide
 Page 1 of 21
 OwnTech SPIN / TWIST Timing Benchmark
-Experiment Setup Guide v2 — review of v1, wiring, build settings, procedure E0–E7, data 
+Experiment Setup Guide v2 — review of  wiring, build settings, procedure E0–E7, data 
 recording, complete source code
 Companion to: OwnTech_TWIST_Timing_Program_EN.docx and main_timing_EN.cpp (v1). This guide 
-supersedes the v1 code listing with main.cpp v2 (Section 10).
-Target: SPIN 1.2.0 (STM32G474RE, Cortex-M4F, 170 MHz) with TWIST 1.4.2 shield, OwnTech Core on Zephyr 
-RTOS, PlatformIO/VS Code. Everything stated about the OwnTech API below was checked directly in the 
-OwnTech Core sources (GitHub owntech-foundation/core, main branch, October 2026) — file names are given 
-so you can re-check.
+supersedes the v1 code listing with main.cpp.
 Safety. Experiments E0–E6 run with the TWIST power stage unpowered: USB only. No PWM, no power-stage 
 enable and no ADC acquisition is started by the benchmark. E7 (full control loop with PWM) is a separate 
 experiment and follows the OwnTech power-up procedure of your lab.
