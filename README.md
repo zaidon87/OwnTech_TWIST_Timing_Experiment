@@ -57,7 +57,7 @@ OwnTech_TWIST_Timing_Experiment/
 │   ├── experiment_matrix.csv
 │   └── campaign_record.csv
 ├── docs/
-│   ├── OwnTech_TWIST_Timing_Experiment_Guide_EN.docx
+│   ├── OwnTech_TWIST_Timing_Experiment_Guide_EN.md
 │   ├── measurement_method.md
 │   ├── hardware_wiring.md
 │   ├── acceptance_criteria.md
@@ -153,7 +153,7 @@ Do not start the TIM3 incremental encoder during the benchmark because it can cl
 ## Source-of-truth files
 
 - `firmware/src/main.cpp`: reviewed benchmark implementation used for execution.
-- `docs/OwnTech_TWIST_Timing_Experiment_Guide_EN.docx`: full experiment setup guide.
+- `docs/OwnTech_TWIST_Timing_Experiment_Guide_EN.md`: full English experiment setup guide exported to GitHub-friendly Markdown from the supplied DOCX.
 - `reference/main_timing_v2_EN.cpp`: untouched reference copy of the supplied source.
 
 ## License
