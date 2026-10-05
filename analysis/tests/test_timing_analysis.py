@@ -1,10 +1,10 @@
 from pathlib import Path
-import importlib.util
+import sys
 
-MODULE = Path(__file__).resolve().parents[1] / "timing_analysis.py"
-spec = importlib.util.spec_from_file_location("timing_analysis", MODULE)
-mod = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(mod)
+ANALYSIS_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ANALYSIS_DIR))
+
+import timing_analysis as mod
 
 
 def test_parse_and_summary():
