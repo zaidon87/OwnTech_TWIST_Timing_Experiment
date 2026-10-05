@@ -2,7 +2,7 @@
 
 > GitHub text export of the supplied English guide. The original source was a DOCX document.
 
-<PARSED TEXT FOR PAGE: 1 / 21>OwnTech SPIN/TWIST timing benchmark — Experiment Setup Guide
+OwnTech SPIN/TWIST timing benchmark — Experiment Setup Guide
 Page 1 of 21
 OwnTech SPIN / TWIST Timing Benchmark
 Experiment Setup Guide v2 — review of  wiring, build settings, procedure E0–E7, data 
