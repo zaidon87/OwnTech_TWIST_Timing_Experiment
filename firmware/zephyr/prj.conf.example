@@ -1,0 +1,9 @@
+# Reference only. Merge with the OwnTech project's existing zephyr/prj.conf.
+# Keep the selected optimization level identical across the whole campaign.
+
+# OwnTech default is documented as size optimization (-Os).
+# To intentionally use speed optimization instead, record that choice and use:
+# CONFIG_SPEED_OPTIMIZATIONS=y
+
+# The experiment guide states that OwnTech defaults already enable printk,
+# FPU support, zero-latency IRQs, and asynchronous tasks required by this benchmark.
