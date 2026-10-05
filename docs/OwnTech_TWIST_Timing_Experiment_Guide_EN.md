@@ -12,7 +12,7 @@ supersedes the  code listing with main.cpp.
 Safety. Experiments E0–E6 run with the TWIST power stage unpowered: USB only. No PWM, no power-stage 
 enable and no ADC acquisition is started by the benchmark. E7 (full control loop with PWM) is a separate 
 experiment and follows the OwnTech power-up procedure of your lab.
-1. Review of version 1 — verdict and changes..........................................................................................................1
+1. Review ..........................................................................................................1
 2. Equipment..............................................................................................................................................................1
 3. Pin selection and wiring......................................................................................................................................... 1
 3.1 SPIN header pin → STM32 pin map.................................................................................................................1
