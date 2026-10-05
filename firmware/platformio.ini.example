@@ -1,0 +1,13 @@
+; Reference settings taken from the experiment guide.
+; Merge these with the platformio.ini from the OwnTech project that already builds.
+
+; board = spin
+; board_version = 1_2_0
+; board_shield = twist
+; board_shield_version = 1_4_2
+monitor_speed = 115200
+
+; OwnTech default build flags noted in the guide:
+; build_flags = -std=c++2a -fsingle-precision-constant
+;
+; Do not add ad-hoc -O flags here. Control optimization through Zephyr Kconfig.
