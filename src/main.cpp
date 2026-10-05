@@ -17,23 +17,45 @@
  * SPDX-License-Identifier: LGPL-2.1
  */
 
+#include "timing_config.h"
 #include "cvb_algorithm.h"
 
-// Standalone CVB baseline: no power, sensors or communication initialized.
 static volatile uint32_t result_guard;
-int main(void)
+static uint32_t input_counter;
+
+static void prepare_cvb_input()
 {
+    const float32_t offset = static_cast<float32_t>(input_counter++ & 7U) * 0.01F;
     for (uint8_t i = 0; i < total_number_of_modules_arm; ++i) {
-        modules_capacitor_voltages_upper_arm[i] = 75.0F - i;
-        modules_capacitor_voltages_lower_arm[i] = 70.0F + i;
+        modules_capacitor_voltages_upper_arm[i] = 75.0F - i + offset;
+        modules_capacitor_voltages_lower_arm[i] = 75.0F - i + offset;
     }
     number_of_connected_submodules_upper_arm = 2.0F;
     number_of_connected_submodules_lower_arm = 3.0F;
+}
+
+static void cvb_execute()
+{
+#if CVB_SCOPE != 2
     sorting_upper_arm();
+#endif
+#if CVB_SCOPE != 1
     sorting_lower_arm();
+#endif
+}
+
+static void consume_cvb_result()
+{
     uint32_t mask = 0;
     for (uint8_t i = 0; i < total_number_of_modules_arm; ++i)
         mask |= (g_u[i] << i) | (g_l[i] << (i + 5));
     result_guard = mask;
+}
+
+#include "timing_harness.h"
+
+int main(void)
+{
+    setup_routine();
     return 0;
 }
