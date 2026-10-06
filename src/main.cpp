@@ -802,7 +802,7 @@ void setup_routine()
 
     task.createCritical(loop_critical_task, control_task_period);
 
-    shield.sensors.enableDefaultTwistSensors();
+    //  shield.sensors.enableDefaultTwistSensors();
 
     if(module_ID == MMC_SM1)
     {
@@ -876,7 +876,7 @@ void setup_routine()
         communication.sync.initSlave();
     }
 
-    task.startCritical();
+    task.startCritical(false);
 }
 
 /* --------------LOOP FUNCTIONS-------------------------------- */
@@ -1214,7 +1214,7 @@ void loop_critical_task()
                 }
                 if (pwm_enable == true)
                 {
-                    shield.power.stop(ALL); // Makes Q1 open and Q2 open
+                    // shield.power.stop(ALL); // Makes Q1 open and Q2 open
                 }
                 pwm_enable = false;
             }
@@ -1230,7 +1230,7 @@ void loop_critical_task()
                 if (!pwm_enable)
                 {
                     pwm_enable = true;
-                    shield.power.start(LEG1);
+                    // shield.power.start(LEG1);
                 }
             }
             critical_task_timer++;
