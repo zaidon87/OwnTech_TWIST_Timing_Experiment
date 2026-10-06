@@ -9,13 +9,13 @@ from test_timing_analysis import test_parse_and_summary
 
 
 class CampaignTests(unittest.TestCase):
-    def make_log(self, path):
+    def make_log(self, path, n=5):
         lines = []
-        for batch in range(1, 541):
+        for batch in range(1, 6*5*(n+1)*3+1):
             case = (batch-1)//3
             lines.extend([
-                f"CVB_META,{batch},{case},0,pattern,1,-1,{case%6},{5-case%6},119556,0,0",
-                f"CSV,{batch},3,5,1000,100,110,120,200,220,240,17,34,51,33990,34000,34010,0,34000",
+                f"CVB_META,{batch},{case},0,pattern,1,-1,{case%(n+1)},{n-case%(n+1)},{369*9*(n+1)**2},0,0",
+                f"CSV,{batch},3,{n},1000,100,110,120,200,220,240,17,34,51,33990,34000,34010,0,34000",
             ])
         path.write_text("\n".join(lines)+"\n")
 
@@ -29,6 +29,17 @@ class CampaignTests(unittest.TestCase):
             self.assertEqual(summary["samples"], 540000)
             self.assertEqual(cases[0]["samples"], 3000)
             self.assertEqual(summary["t_max_cycles"], 120)
+
+    def test_ten_modules_per_arm(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/"run.log"
+            self.make_log(path, n=10)
+            cases, summary = analyze(path)
+            self.assertEqual(len(cases), 330)
+            self.assertEqual(summary["samples"], 990000)
+            self.assertEqual(summary["selftest_checks"], 401841)
+            self.assertEqual(cases[-1]["n_upper"], 10)
+            self.assertEqual(cases[-1]["n_lower"], 0)
 
     def test_reject_incomplete_or_failed_selftest(self):
         with tempfile.TemporaryDirectory() as directory:

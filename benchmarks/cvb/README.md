@@ -1,3 +1,7 @@
+> **Current source: E1, 10 modules per arm (20 total).** See [E1 execution guide](E1_N10.md)
+> and [version package](versions/E1_N10.zip). The N=5 campaign described below is
+> preserved historical data. For E1 capture, pass `--modules-per-arm 10`.
+
 # Centralized CVB timing campaign
 
 This is the lead-board CVB from `hackathon_lille/main` at `ecb51f5`, with
@@ -124,3 +128,32 @@ complete ISR duration, a production-loop guarantee, or a formal WCET bound.
 Input restoration warms the working data and the results describe that setup.
 
 For current progress and commit hashes, see the root `CVB_TIMING_PLAN.md`.
+
+## Read-only oscilloscope LAN queries
+
+`rigol_lan_readonly.py` uses Python's standard-library TCP socket; VISA and driver
+installation are not required. Supply the scope's real IPv4 address:
+
+```powershell
+& 'C:\Users\Dell\.platformio\penv\Scripts\python.exe' benchmarks/cvb/rigol_lan_readonly.py YOUR_SCOPE_IP
+```
+
+Replace `YOUR_SCOPE_IP` with the numeric address displayed on the scope.
+The default port 5555 is a candidate, **not yet verified on this MHO984**; use
+`--port` for the port in its SOCKET resource address. A successful TCP connection
+tests that endpoint. The script checks `*IDN?` before measurement queries and
+reads the instrument's reported LXI/SOCKET addresses, CH1 positive width and
+existing current/average/minimum/maximum/deviation/count statistics. Commands
+follow the [MHO900 programming guide](https://www.rigol.com/dam/global/downloads/brochures/en/program-guide/oscilloscopes/MHO900-ProgrammingGuide.pdf).
+
+Only allowlisted queries are sent. No reset, run/stop, acquisition, trigger,
+channel, statistics-enable or statistics-reset command is sent. The SPIN COM
+port and firmware are not accessed. Missing/disabled measurements are retained
+as unavailable rather than enabled; a transport timeout stops the session to
+avoid misattributing delayed responses. Sequential readings are not simultaneous.
+
+JSON results preserve the reply text and exact response bytes as hex, plus
+microsecond conversions for valid width values. Output files are never
+overwritten. A real instrument connection remains unverified until the actual
+IP is supplied and a successful identification is captured; no working LAN
+method is claimed yet.

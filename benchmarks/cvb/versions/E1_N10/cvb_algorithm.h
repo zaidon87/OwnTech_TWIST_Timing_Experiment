@@ -25,7 +25,7 @@
 
 // Extracted verbatim from hackathon_lille/main, ecb51f5.
 static const uint8_t total_number_of_modules_arm = CVB_MODULES_PER_ARM;
-static uint8_t index_list[CVB_MODULES_PER_ARM];
+static uint8_t index_list[10] = {0,1,2,3,4,5,6,7,8,9};
 static float32_t number_of_connected_submodules_upper_arm;
 static float32_t number_of_connected_submodules_lower_arm;
 static float32_t modules_capacitor_voltages_upper_arm[total_number_of_modules_arm];
@@ -40,9 +40,7 @@ static uint8_t g_l[total_number_of_modules_arm];
 void sorting_upper_arm()
 {
     /* Reset upper modules indexes every time the function is used */
-    for (uint8_t i = 0; i < total_number_of_modules_arm; ++i)
-        index_list[i] = i;
-    memcpy(modules_indexes_upper_arm, index_list, total_number_of_modules_arm * sizeof(index_list[0]));
+    memcpy(modules_indexes_upper_arm, index_list, total_number_of_modules_arm);
     
     /* Sorts upper modules indexes according to capacitor voltage in ascending order (lower to higher voltage) */
     uint8_t counter_loops_sorting = 0;
@@ -111,9 +109,7 @@ void sorting_upper_arm()
 void sorting_lower_arm()
 {
     /* Reset lower modules indexes every time the function is used */
-    for (uint8_t i = 0; i < total_number_of_modules_arm; ++i)
-        index_list[i] = i;
-    memcpy(modules_indexes_lower_arm, index_list, total_number_of_modules_arm * sizeof(index_list[0]));
+    memcpy(modules_indexes_lower_arm, index_list, total_number_of_modules_arm);
     
     /* Sorts lower modules indexes according to capacitor voltage in ascending order (lower to higher voltage) */
     uint8_t counter_loops_sorting = 0;

@@ -120,3 +120,31 @@ state. No required implementation work remains. Do not rerun or overwrite accept
 logs. Optional follow-up: measure PC7 pulses with an oscilloscope for independent
 clock and timing validation. The board is currently running both-arm CVB with the
 power stage and ADC disabled.
+
+## Read-only LAN follow-up (2026-10-06)
+
+Added `benchmarks/cvb/rigol_lan_readonly.py` and its README instructions. It reads
+identity, LXI/SOCKET resource strings, CH1 positive width and existing statistics
+using only allowlisted SCPI queries over a Python TCP socket. Simulated transport
+checks passed, including fragmented responses and reset-command rejection.
+Actual scope IP is still missing (`192.168.x.x` was a placeholder); the default
+port 5555 and real connection have NOT been verified. No instrument queries,
+firmware changes, driver installations or oscilloscope configuration changes
+were made during script creation. Next: obtain the real numeric IP, run the script
+and record the exact identity/resource/measurement responses.
+
+## E1 N=10 implementation (2026-10-06)
+
+| Stage | Status | Evidence / next action |
+| --- | --- | --- |
+| Adapt CVB to 10 modules per arm | Complete | Parameterized array size; original sorting bodies preserved; 20-bit output mask |
+| Generalize cases and correctness | Complete, compiled | 330 cases; 401841 bounded startup checks (not yet run on board) |
+| Update capture/analysis | Complete | Supports N=5 and N=10; five host tests pass |
+| Compile E1 USB image | Complete | 112008 B flash, 34273 B RAM |
+| Provide executable version | Complete | benchmarks/cvb/versions/E1_N10.zip; see benchmarks/cvb/E1_N10.md |
+| Upload and execute E1 | Pending user execution | Board was not flashed during this update |
+| Collect E0_N10 and E1 timing | Pending | Do not relabel previous five-module results |
+
+Current source defaults are mode 3, scope 0, CVB_MODULES_PER_ARM=10. This supersedes
+older source-default notes above; the last firmware we flashed remains the N=5
+combined-arm image. Use the E1 guide to upload when ready.

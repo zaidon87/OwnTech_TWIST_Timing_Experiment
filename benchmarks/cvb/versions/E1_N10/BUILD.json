@@ -1,0 +1,30 @@
+{
+  "experiment": "E1",
+  "modules_per_arm": 10,
+  "total_modules": 20,
+  "mode": 3,
+  "scope": 0,
+  "period_us": 200,
+  "cases": 330,
+  "batches": 990,
+  "samples": 990000,
+  "startup_checks_expected": 401841,
+  "build": "USB SUCCESS",
+  "board_execution": "not performed",
+  "source_commit_base": "78f8af1981aa2453a58a5d20279b7f1f2aafe5c1",
+  "sha256": {
+    "analyze_campaign.py": "f2cecb15f0e465031f4b54ffb8e9cea966f2eb3c4d1ed75009f57390a1471572",
+    "capture.py": "0de8fbe22ec2d43505fedf2017bb50a5ca821e87f032e424c9bc3a3fbacab0ac",
+    "cvb_algorithm.h": "49d9ba4b4e5c4ee2849506bd4786e7c622ead2921489417f30b6becabf97fc06",
+    "cvb_cases.h": "1e5ba446d532f34dd82c2db9bffa1c236ff3a6b8f7b1aa5aad6b9909ef880563",
+    "firmware.mcuboot.bin": "363f68f7335173f13074ff663ab48474cc2d126844f08c6bc078fb80b28dbda4",
+    "main.cpp": "18191ab257c057cd19b72fd2368a36fbbb8aa7096bc1b9dd0f7a1a6c970334f1",
+    "README.md": "124770f74df8e1aa56ce026dbb8babb4da1fe0d7623cf801758a5b6f21cb8001",
+    "select_run.py": "d719a516b86c62507e05cfbdb06605c38c07c48709a1f05e5770d97438b5d7bd",
+    "timing_analysis.py": "a6d3b9e583f556a77ef03d0301695a98e09b393c77608fdd9d929c05a22512e8",
+    "timing_config.h": "57545b7a6b52071bfd585a5ee5d6141bf7385ad243df084fdba915713b74e4ef",
+    "timing_harness.h": "bf3384d6dfb13fd5e56370ee201ee39a156884300aa8e9b33e1ae93e7e8ab1b4",
+    "TIMING_LICENSE": "8dec332129cf563063ad1bb50e0889e6e57192d430646b8c1098b90ce41406d2"
+  },
+  "elf_sha256": "a80404658048c1e3035976a494bcdf8c9abdac030b79539690554afe10b5f47a"
+}

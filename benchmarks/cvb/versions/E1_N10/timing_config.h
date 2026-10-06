@@ -8,7 +8,7 @@
 #define TIMING_GPIO_PIN          9U
 #define BATCH_SAMPLES            1000U
 #define MAX_SORT_N               64U
-#define CVB_MODULES_PER_ARM      30U
+#define CVB_MODULES_PER_ARM      10U
 #define TEST_SORT_N              CVB_MODULES_PER_ARM
 #define REFERENCE_DELAY_US       10U
 #define TIMING_USE_STM32_LL      1
@@ -16,4 +16,4 @@
 #define PRINT_CSV                1
 static_assert(CVB_SCOPE >= 0 && CVB_SCOPE <= 2, "Invalid CVB scope");
 
-static_assert(CVB_MODULES_PER_ARM == 5U || CVB_MODULES_PER_ARM == 10U || CVB_MODULES_PER_ARM == 20U || CVB_MODULES_PER_ARM == 30U, "Validated sizes: 5, 10, 20 or 30 per arm");
+static_assert(CVB_MODULES_PER_ARM == 5U || CVB_MODULES_PER_ARM == 10U, "Validated sizes: 5 or 10 per arm");
