@@ -3,7 +3,7 @@
 #define TIMING_TEST_MODE         3
 // CVB scope: 0 both arms, 1 upper only, 2 lower only.
 #define CVB_SCOPE                0
-#define CONTROL_PERIOD_US        200U
+#define CONTROL_PERIOD_US        500U
 #define TIMING_IRQ_SOURCE_TIM6   1
 #define TIMING_GPIO_PIN          9U
 #define BATCH_SAMPLES            1000U
