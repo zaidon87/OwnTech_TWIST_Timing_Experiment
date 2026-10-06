@@ -1,3 +1,34 @@
+# Standalone Lille sorting benchmark
+
+The active `src/main.cpp` runs the Lille `ecb51f5` sorting routines on the lead
+using fixed reproducible pseudorandom capacitor voltages (70..80 V). It starts
+automatically, without RS485 transmission/reception, synchronization, ADC,
+PWM, or console commands. Flash this firmware on the lead board.
+
+Set `SORT_MODULES_PER_ARM` in `src/main.cpp`, then rebuild and
+flash for each case. Suggested cases are 1, 5, 10, 15, 20, 25, 30 modules **per
+arm**. For a campaign up to 30 modules across both arms, stop at 15 per arm.
+The default is 5 per arm. Counts outside 1..30 fail at compile time.
+
+Probe PC7 (SPIN pin 9) relative to board ground and trigger on its rising edge.
+The high pulse measures `sorting_upper_arm(); sorting_lower_arm();` together:
+index reset, the original N+1 full bubble-sort passes, and insertion selection.
+It includes GPIO marker overhead; it is not a pure bubble-sort-only duration.
+Random values are generated once at startup. The same unsorted inputs are
+restored before each pulse; input copies and output consumption are outside
+the pulse. Current signs are fixed (+ upper, - lower), with all N modules
+inserted per arm on every sample. Both connected-module counts are initialized
+to N in their declarations. The default repetition period is
+5 ms using TIM6, independent of PWM. Each build holds one module count fixed,
+so scope captures cannot mix counts. No hardware timing results have been
+collected for this new variable-size benchmark.
+
+The material below documents the previous five-module DWT campaign; its
+results and helper files are retained as historical data and are not produced
+by the active standalone main.
+
+---
+
 # Centralized CVB timing campaign
 
 This is the lead-board CVB from `hackathon_lille/main` at `ecb51f5`, with
