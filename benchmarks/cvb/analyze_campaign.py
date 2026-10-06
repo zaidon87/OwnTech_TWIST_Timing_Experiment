@@ -25,7 +25,7 @@ def analyze(path, cpu_hz=170000000):
             meta = metadata.pop(row.batch, None)
             if meta is None:
                 continue  # Capture can begin in the middle of the first report.
-            if row.mode != 3 or row.N not in (5, 10) or row.samples != 1000:
+            if row.mode != 3 or row.N not in (5, 10, 20, 30) or row.samples != 1000:
                 raise ValueError("Not a supported CVB campaign")
             if modules is not None and modules != row.N:
                 raise ValueError("Mixed module counts")

@@ -197,7 +197,7 @@ typedef struct
     volatile timing_summary_t latency;    /* TIM6 event -> callback entry  */
     volatile timing_summary_t period;     /* entry-to-entry (jitter)       */
     volatile uint32_t case_id;
-    volatile uint32_t result_guard;
+    volatile uint64_t result_guard;
     volatile uint32_t overruns;           /* body >= Ts in this batch      */
     volatile uint32_t overruns_total;     /* since boot                    */
 } timing_snapshot_t;
@@ -497,7 +497,8 @@ static void loop_background_task(void)
     uint32_t id_before;
     uint32_t id_after;
     timing_summary_t t, c, l, p;
-    uint32_t overruns, overruns_total, case_id, result_guard;
+    uint32_t overruns, overruns_total, case_id;
+    uint64_t result_guard;
 
     do
     {
@@ -521,11 +522,12 @@ static void loop_background_task(void)
         if (last_batch_id && id_before != last_batch_id + 1U)
             printk("BATCH_GAP,%u,%u\n", last_batch_id, id_before);
         last_batch_id = id_before;
-        printk("CVB_META,%u,%u,%u,%s,%d,%d,%u,%u,%u,%u,%u\n",
+        printk("CVB_META,%u,%u,%u,%s,%d,%d,%u,%u,%u,%u,%llu\n",
                id_before, case_id, (uint32_t)CVB_SCOPE, cvb_pattern_names[case_id / CVB_CASES_PER_PATTERN],
                cvb_current_pairs[(case_id / CVB_COUNT_OPTIONS) % 5U][0],
                cvb_current_pairs[(case_id / CVB_COUNT_OPTIONS) % 5U][1], case_id % CVB_COUNT_OPTIONS, CVB_N - case_id % CVB_COUNT_OPTIONS,
-               cvb_selftest_checks, cvb_selftest_failures, result_guard);
+               cvb_selftest_checks, cvb_selftest_failures,
+               static_cast<unsigned long long>(result_guard));
 
 #if TIMING_VERBOSE_REPORT
         const uint32_t budget = g_budget_cycles;

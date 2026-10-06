@@ -1,6 +1,6 @@
-> **Current source: E1, 10 modules per arm (20 total).** See [E1 execution guide](E1_N10.md)
-> and [version package](versions/E1_N10.zip). The N=5 campaign described below is
-> preserved historical data. For E1 capture, pass `--modules-per-arm 10`.
+> **Current source: N=30 modules per arm (60 total), mode 3, scope 0.**
+> See [N=30 execution guide](N30.md). The E1_N10 package and the N=5 campaign
+> below are historical snapshots; their timings do not describe N=30.
 
 # Centralized CVB timing campaign
 

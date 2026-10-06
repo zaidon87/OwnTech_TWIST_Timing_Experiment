@@ -41,6 +41,21 @@ class CampaignTests(unittest.TestCase):
             self.assertEqual(cases[-1]["n_upper"], 10)
             self.assertEqual(cases[-1]["n_lower"], 0)
 
+    def test_larger_module_counts(self):
+        for n in (20, 30):
+            with self.subTest(n=n), tempfile.TemporaryDirectory() as directory:
+                path = Path(directory)/"run.log"
+                self.make_log(path, n=n)
+                # Preserve the decimal CSV field with outputs above bit 31.
+                mask = (1 << (2*n)) - 1
+                path.write_text(path.read_text().replace(
+                    f",{369*9*(n+1)**2},0,0", f",{369*9*(n+1)**2},0,{mask}"))
+                cases, summary = analyze(path)
+                self.assertEqual(len(cases), 30*(n+1))
+                self.assertEqual(summary["samples"], 90000*(n+1))
+                self.assertEqual(summary["selftest_checks"], 369*9*(n+1)**2)
+                self.assertEqual(cases[-1]["n_upper"], n)
+
     def test_reject_incomplete_or_failed_selftest(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory)/"run.log"

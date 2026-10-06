@@ -18,7 +18,24 @@ static uint32_t cvb_selftest_checks;
 static uint32_t cvb_selftest_failures;
 static uint32_t cvb_active_case;
 static uint32_t cvb_sample_number;
-static volatile uint32_t cvb_result_guard;
+static volatile uint64_t cvb_result_guard;
+
+// Repeat mirrored five-element blocks, using only values filled in this call.
+// Preserves the original N=5 and N=10 test vectors.
+static void cvb_make_tied_pattern(uint32_t arrangement, float32_t *values)
+{
+    uint32_t code = arrangement;
+    for (uint8_t i = 0; i < CVB_N; ++i) {
+        if (i < 5) {
+            values[i] = 70.0F + static_cast<float32_t>(code % 3U);
+            code /= 3U;
+        } else {
+            const uint8_t source = 4U - (i % 5U);
+            values[i] = 70.0F + static_cast<float32_t>(
+                (static_cast<uint32_t>(values[source] - 70.0F) + arrangement % 3U) % 3U);
+        }
+    }
+}
 
 static void cvb_make_pattern(uint32_t pattern, float32_t *values)
 {
@@ -77,9 +94,10 @@ static void cvb_execute()
 
 static void consume_cvb_result()
 {
-    uint32_t mask = 0;
+    uint64_t mask = 0;
     for (uint8_t i = 0; i < CVB_N; ++i)
-        mask |= (g_u[i] << i) | (g_l[i] << (i + CVB_N));
+        mask |= (static_cast<uint64_t>(g_u[i]) << i)
+              | (static_cast<uint64_t>(g_l[i]) << (i + CVB_N));
     cvb_result_guard = mask;
 }
 
@@ -139,22 +157,13 @@ static bool cvb_selftest()
         cvb_make_pattern(pattern, values);
         cvb_test_vector(values);
     }
-    // N=5: exhaustive ternary vectors. N=10: 243 bounded tied vectors,
-    // with a mirrored/shifted second half to exercise all ten indices.
+    // N=5: exhaustive ternary vectors. Larger N: 243 bounded tied vectors.
     for (uint32_t arrangement = 0; arrangement < 243; ++arrangement) {
-        uint32_t code = arrangement;
-        for (uint8_t i = 0; i < CVB_N; ++i) {
-            if (i < 5) {
-                values[i] = 70.0F + static_cast<float32_t>(code % 3);
-                code /= 3;
-            } else {
-                values[i] = 70.0F + static_cast<float32_t>((static_cast<uint32_t>(values[CVB_N-1U-i] - 70.0F) + arrangement % 3U) % 3U);
-            }
-        }
+        cvb_make_tied_pattern(arrangement, values);
         cvb_test_vector(values);
     }
-    // N=5: all 5! permutations. N=10: 120 seeded shuffled permutations,
-    // bounded deliberately (not exhaustive 10! enumeration).
+    // N=5: all 5! permutations. Larger N: 120 seeded shuffled permutations,
+    // bounded deliberately (not exhaustive N! enumeration).
     uint32_t shuffle_seed = 0x43564210U;
     for (uint32_t permutation = 0; permutation < 120; ++permutation) {
         uint8_t remaining[CVB_N];

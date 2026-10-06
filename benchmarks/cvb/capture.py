@@ -14,7 +14,7 @@ def main():
     parser.add_argument("--serial-number", default="423250070032003B")
     parser.add_argument("--mode", type=int, choices=(0, 2, 3), required=True)
     parser.add_argument("--scope", type=int, choices=(0, 1, 2), default=0)
-    parser.add_argument("--timeout", type=float, default=300)
+    parser.add_argument("--timeout", type=float, default=1800)
     parser.add_argument("--modules-per-arm", type=int, choices=(5, 10, 20, 30), default=5)
     parser.add_argument("--batches", type=int, default=20, help="Calibration batches")
     args = parser.parse_args()
