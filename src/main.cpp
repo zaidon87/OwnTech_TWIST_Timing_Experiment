@@ -67,7 +67,12 @@
 #define UNDER_VOLTAGE 4
 #define OVER_CURRENT 5
 
-constexpr uint8_t MMC_SM_COUNT = 5; // Active followers, excluding the central module.
+constexpr uint8_t MMC_SM_COUNT = 5; // Physical followers, excluding the central module.
+constexpr uint16_t MMC_RESPONSE_COUNT = 7; // Total follower responses per exchange (1..255).
+static_assert(MMC_RESPONSE_COUNT >= 1 && MMC_RESPONSE_COUNT <= 255,
+              "Response count must fit in the frame logical sm_id");
+static_assert(MMC_SM_COUNT > 1 || MMC_RESPONSE_COUNT == 1,
+              "Repeated responses require at least two physical followers");
 constexpr uint8_t MMC_SM_CAPACITY = 10; // Storage for the existing two-arm CVB/scope layout.
 constexpr uint8_t MMC_SM_FIRST = MMC_SM1;
 constexpr uint8_t MMC_SM_LAST = MMC_SM_FIRST + MMC_SM_COUNT - 1;
@@ -247,7 +252,7 @@ constexpr uint32_t MMC_STATUS_UPPER_ARM_MASK = (1UL << MMC_STATUS_CODE_BITS);
  * - `capacitor_voltage_raw`: 12-bit encoded capacitor voltage.
  * - `arm_current_raw`: 12-bit encoded arm current.
  * - `status`: 3-bit global status level plus the arm selection flag.
- * - `sm_id`: identifier of the sender (lead or submodule index).
+ * - `sm_id`: identifier of the sender (lead or physical submodule index).
  */
 struct MMC_frame
 {
@@ -279,7 +284,7 @@ struct MMC_frame
             uint8_t upper_arm_frame : 1;
         } bits;
     } status;
-    uint8_t sm_id;
+    uint8_t sm_id; // Logical ID: 0 for the lead; 1..MMC_RESPONSE_COUNT for replies.
 } __packed;
 
 typedef MMC_frame MMC_frame_t;
@@ -332,7 +337,7 @@ static inline uint16_t mmc_frame_get_current_raw(const MMC_frame_t &frame)
  * @brief Set the submodule identifier associated with an MMC frame.
  *
  * @param frame Frame to update.
- * @param id Identifier of the sender (lead or submodule).
+ * @param id Logical identifier of the sender (0 for lead, otherwise reply rank).
  */
 static inline void mmc_frame_set_sm_identifier(MMC_frame_t &frame, uint8_t id)
 {
@@ -684,12 +689,24 @@ static void update_measurements(void)
     }
 }
 
+// Several logical senders share one physical board (e.g. IDs 1 and 6 on SM1).
+static constexpr uint8_t mmc_physical_sender(uint8_t logical_id)
+{
+    return logical_id == 0 ? MMC_LEAD :
+        static_cast<uint8_t>(MMC_SM_FIRST + (logical_id - 1U) % MMC_SM_COUNT);
+}
+
 void reception_function(void)
 {
     dataRX_mmc = *(MMC_frame_t *)buffer_rx;
-    uint8_t sender_id = mmc_frame_get_sm_identifier(dataRX_mmc);
+    const uint8_t sender_id = mmc_frame_get_sm_identifier(dataRX_mmc);
+    // sm_id carries the logical reply rank, not the physical board identity.
+    if (sender_id > MMC_RESPONSE_COUNT)
+    {
+        return;
+    }
     const bool last_follower_received =
-        (module_ID == MMC_LEAD) && (sender_id == MMC_SM_LAST);
+        (module_ID == MMC_LEAD) && (sender_id == MMC_RESPONSE_COUNT);
     if (last_follower_received)
     {
         spin.gpio.setPin(COMMUNICATION_TIMING_PIN);
@@ -698,9 +715,9 @@ void reception_function(void)
 
     if (module_ID == MMC_LEAD)
     {
-        if ((sender_id >= MMC_SM_FIRST) && (sender_id <= MMC_SM_LAST))
+        if (sender_id != MMC_LEAD)
         {
-            const uint8_t index = sender_id - MMC_SM_FIRST;
+            const uint8_t index = mmc_physical_sender(sender_id) - MMC_SM_FIRST;
             MMC_capacitor_voltage[index] =
                 mmc_decode_voltage(mmc_frame_get_voltage_raw(dataRX_mmc));
             MMC_arm_current[index] =
@@ -733,12 +750,14 @@ void reception_function(void)
             }
         }
 
-        /* The board following the ID of the one who sent will start sending
-            the next message */
-        if (sender_id == static_cast<uint8_t>(module_ID - 1))
+        /* Continue round-robin, stopping after the requested final response.
+         * For five boards: logical ID 6 comes from SM1, logical ID 7 from SM2.
+         */
+        if (sender_id < MMC_RESPONSE_COUNT &&
+            module_ID == mmc_physical_sender(static_cast<uint8_t>(sender_id + 1U)))
         {
             dataTX_mmc = dataRX_mmc; // Copy the received data to the transmission data
-            mmc_frame_set_sm_identifier(dataTX_mmc, module_ID);
+            mmc_frame_set_sm_identifier(dataTX_mmc, static_cast<uint8_t>(sender_id + 1U));
             mmc_frame_set_upper_arm_flag(dataTX_mmc, mmc_is_upper_arm_module(module_ID));
             mmc_frame_set_voltage_raw(dataTX_mmc,
                                       mmc_encode_voltage(Cap_voltage));
