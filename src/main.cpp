@@ -68,7 +68,7 @@
 #define OVER_CURRENT 5
 
 constexpr uint8_t MMC_SM_COUNT = 5; // Physical followers, excluding the central module.
-constexpr uint16_t MMC_RESPONSE_COUNT = 7; // Total follower responses per exchange (1..255).
+constexpr uint16_t MMC_RESPONSE_COUNT = 5; // Total follower responses per exchange (1..255).
 static_assert(MMC_RESPONSE_COUNT >= 1 && MMC_RESPONSE_COUNT <= 255,
               "Response count must fit in the frame logical sm_id");
 static_assert(MMC_SM_COUNT > 1 || MMC_RESPONSE_COUNT == 1,
@@ -93,12 +93,12 @@ constexpr float32_t overcurrent_tolerance = 8.0F; //[A] Set overcurrent toleranc
 /* -------------- BOARD IDENTIFICATION ----------------------- */
 /* --------------- To be changed by user --------------------- */
 
-constexpr uint32_t UID_MMC_LEAD_BOARD = 0x002B002A;
-constexpr uint32_t UID_MMC_SM1_BOARD = 0x0033004C;
-constexpr uint32_t UID_MMC_SM2_BOARD = 0x0031001B;
-constexpr uint32_t UID_MMC_SM3_BOARD = 0x00330049;
-constexpr uint32_t UID_MMC_SM4_BOARD = 0x0033004B;
-constexpr uint32_t UID_MMC_SM5_BOARD = 0x00330054;
+constexpr uint32_t UID_MMC_LEAD_BOARD = 0x0032003B;
+constexpr uint32_t UID_MMC_SM1_BOARD = 0x002A004E;
+constexpr uint32_t UID_MMC_SM2_BOARD = 0x0029004D;
+constexpr uint32_t UID_MMC_SM3_BOARD =  0x00290050;
+constexpr uint32_t UID_MMC_SM4_BOARD = 0x00290028;
+constexpr uint32_t UID_MMC_SM5_BOARD = 0x002B0041;
 constexpr uint32_t UID_MMC_SM6_BOARD = 0x0032003F;
 constexpr uint32_t UID_MMC_SM7_BOARD = 0x004E0048;
 constexpr uint32_t UID_MMC_SM8_BOARD = 0x00470026;
@@ -504,7 +504,7 @@ serial_interface_menu_mode mode = IDLEMODE;
 /* --------------- Firmware CVB variables ------------------*/
 
 /* [us] period of the control task (=critical task) */
-static constexpr uint32_t control_task_period = 200; // µs
+static constexpr uint32_t control_task_period = 500; // µs
 static float32_t Ts = control_task_period * 1e-6F; // s
 /* [bool] state of the PWM (ctrl task) */
 static bool pwm_enable = false;
@@ -821,7 +821,7 @@ void setup_routine()
 
     task.createCritical(loop_critical_task, control_task_period);
 
-    //  shield.sensors.enableDefaultTwistSensors();
+    shield.sensors.enableDefaultTwistSensors();
 
     if(module_ID == MMC_SM1)
     {
@@ -895,7 +895,7 @@ void setup_routine()
         communication.sync.initSlave();
     }
 
-    task.startCritical(false);
+    task.startCritical();
 }
 
 /* --------------LOOP FUNCTIONS-------------------------------- */
@@ -1220,7 +1220,7 @@ void loop_critical_task()
                 if (!pwm_enable)
                 {
                     pwm_enable = true;
-                    shield.power.start(LEG1);
+                    // shield.power.start(LEG1);
                 }
             }
             
