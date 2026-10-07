@@ -85,6 +85,13 @@ constexpr uint8_t COMMUNICATION_TIMING_PIN = PC7; // SPIN pin 9.
 
 static const float f0 = 50.F; //[Hz] Output frequency used to generate the sinusoidal reference for open-loop control
 static const uint8_t total_number_of_modules_arm = 5; //[-] Number of modules per arm
+// Lead-only sorting workload: sort the first N entries of each arm (1..5).
+// Smaller N leaves the remaining entries in their original order; CVB selection
+// still uses all physical modules, so this is a partial-sort timing experiment.
+static constexpr uint8_t number_of_modules_to_sort = 5; // Set to 2, 3 or 4.
+static_assert(number_of_modules_to_sort >= 1 &&
+              number_of_modules_to_sort <= total_number_of_modules_arm,
+              "Sorting count must be within the physical arm size");
 constexpr float32_t Vcap_expected = 80.0F; //[V] Capacitor DC voltage expected during the test (used to set voltage measurement scale for 12 bits)
 constexpr float32_t i_expected = 10.0F; //[A] Expected current amplitude during test (used to set current measurement scale for 12 bits)
 constexpr float32_t overvoltage_tolerance = 80.0F; //[V] Set overvoltage tolerance (default max TWIST voltage)
@@ -982,9 +989,9 @@ void sorting_upper_arm()
     
     /* Sorts upper modules indexes according to capacitor voltage in ascending order (lower to higher voltage) */
     uint8_t counter_loops_sorting = 0;
-    while(counter_loops_sorting < total_number_of_modules_arm + 1){ 
+    while(counter_loops_sorting < number_of_modules_to_sort + 1){
             /* Bubble sorting technique - simple */
-            for(uint8_t counter = 0; counter < total_number_of_modules_arm-1; counter++)
+            for(uint8_t counter = 0; counter < number_of_modules_to_sort-1; counter++)
             {
                 if(modules_capacitor_voltages_upper_arm[counter] > modules_capacitor_voltages_upper_arm[counter + 1])
                 {
@@ -1051,9 +1058,9 @@ void sorting_lower_arm()
     
     /* Sorts lower modules indexes according to capacitor voltage in ascending order (lower to higher voltage) */
     uint8_t counter_loops_sorting = 0;
-    while(counter_loops_sorting < total_number_of_modules_arm + 1){ 
+    while(counter_loops_sorting < number_of_modules_to_sort + 1){
             /* Bubble sorting technique - simple */
-            for(uint8_t counter = 0; counter < total_number_of_modules_arm-1; counter++)
+            for(uint8_t counter = 0; counter < number_of_modules_to_sort-1; counter++)
             {
                 if(modules_capacitor_voltages_lower_arm[counter] > modules_capacitor_voltages_lower_arm[counter + 1])
                 {
