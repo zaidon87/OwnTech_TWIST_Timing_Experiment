@@ -706,11 +706,8 @@ void reception_function(void)
         return;
     }
     const bool last_follower_received =
-        (module_ID == MMC_LEAD) && (sender_id == MMC_RESPONSE_COUNT);
-    if (last_follower_received)
-    {
-        spin.gpio.setPin(COMMUNICATION_TIMING_PIN);
-    }
+        (module_ID == MMC_LEAD) && (sender_id == MMC_SM1);
+
     uint8_t status_code = mmc_frame_get_status_code(dataRX_mmc);
 
     if (module_ID == MMC_LEAD)
@@ -788,7 +785,7 @@ void reception_function(void)
     counter_receive++;
     if (last_follower_received)
     {
-        spin.gpio.resetPin(COMMUNICATION_TIMING_PIN);
+        LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_7);
     }
 }
 
@@ -1120,6 +1117,8 @@ void sorting_lower_arm()
  */
 void loop_critical_task()
 {
+    spin.gpio.setPin(COMMUNICATION_TIMING_PIN);
+
     update_measurements();
 
     if (mode == POWERMODE)
